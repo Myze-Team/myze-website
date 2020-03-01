@@ -1,0 +1,28 @@
+{
+  "name": "myze-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "./node_modules/nodemon/bin/nodemon.js index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Myze-Team/myze-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Myze-Team/myze-website/issues"
+  },
+  "homepage": "https://github.com/Myze-Team/myze-website#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
