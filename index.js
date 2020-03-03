@@ -1,13 +1,6 @@
-require('dotenv').config()
 const express = require('express')
-const mongoose = require('mongoose')
-const path = require('path')
 const app = express()
-
-
-// json body parser
-app.use(express.json())
-
+const path = require('path')
 
 // serve static files
 app.use(express.static(path.join(__dirname, '/client')))
@@ -21,19 +14,7 @@ app.get('*', (req, res) => {
 })
 
 // listen on port
-const port = process.env.PORT || 5000
-
-// connect to MongoDB
-// supply cluster and credentials
-mongoose.connect('mongodb+srv://'
-  + process.env.MONGO_DB_USER + ':'
-  + process.env.MONGO_DB_PASS + '@'
-  + process.env.MONGO_DB_CLUSTER
-  + '.mongodb.net/test?retryWrites=true&w=majority',
-  { useNewUrlParser: true },
-  () => {
-    app.listen(port, () => {
-      console.log('App is listening on port ' + port)
-    })
-  }
-)
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log('App is listening on port ' + port)
+})
