@@ -32,6 +32,9 @@ class Landing extends Component {
                       <li><a href="#features-section" className="nav-link">Features</a></li>
                       <li><a href="#about-section" className="nav-link">About Us</a></li>
                       <li><a href="#contact-section" className="nav-link">Contact</a></li>
+                      <li><a href="/register" className="nav-link" style={{
+                        color: "#4285f4"
+                      }}>Get Started</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -49,7 +52,7 @@ class Landing extends Component {
                       <h1>Make Your Business More Profitable</h1>
                       <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam assumenda ea quo cupiditate facere deleniti fuga officia.</p>
                       <div>
-                        <a href="#" className="btn btn-primary mr-2 mb-2">Get Started</a>
+                        <a href="/register" className="btn btn-primary mr-2 mb-2">Get Started</a>
                       </div>
                     </div>
                   </div>
