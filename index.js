@@ -1,24 +1,62 @@
 require('dotenv').config()
 const express = require('express')
+const expressLayouts = require('express-ejs-layouts')
 const mongoose = require('mongoose')
+const flash = require('connect-flash')
+const session = require('express-session')
 const path = require('path')
 const app = express()
 
+// set ejs view engine
+app.use(expressLayouts);
+app.set('view engine', 'ejs');
 
 // json body parser
 app.use(express.json())
 
+// Express session
+app.use(
+  session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+  })
+);
+
+// Connect flash
+app.use(flash());
+
+// Global variables
+app.use(function(req, res, next) {
+  res.locals.success_msg = req.flash('success_msg');
+  res.locals.error_msg = req.flash('error_msg');
+  res.locals.error = req.flash('error');
+  next();
+});
 
 // serve static files
-app.use(express.static(path.join(__dirname, '/client')))
+app.use(express.static(path.join(__dirname, '/public')))
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname + '/client/index.html'))
+  res.render('landing')
 })
 
+app.get('/register', (req, res) => {
+  res.render('register', { message: req.flash('info') })
+})
+
+app.get('/lmao', (req, res) => {
+  req.flash('error_msg', 'cool')
+  res.redirect('/register')
+})
+
+/*
 app.get('*', (req, res) => {
   res.redirect('/')
 })
+*/
+
+app.use('/users', require('./routes/users.js'));
 
 // listen on port
 const port = process.env.PORT || 5000
