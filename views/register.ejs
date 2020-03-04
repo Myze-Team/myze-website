@@ -7,7 +7,35 @@
           <h4 class="card-title">Register</h4>
         </div>
         <div class="card-body">
-        Test
+        <form method="post" action="/register">
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label for="email-input" class="text-black">Email</label>
+              <input id="email-input" class="form-control rounded-0" name="email" type="email" required></input>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label for="password-input" class="text-black">Password</label>
+              <input id="password-input" class="form-control rounded-0" name="password" type="password" required></input>
+            </div>
+          </div>
+          <div class="row form-group">
+            <div class="col-md-12">
+              <label for="password2-input" class="text-black">Confirm Password</label>
+              <input id="password2-input" class="form-control rounded-0" name="password2" type="password" required></input>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-block btn-primary mr-2 mb-2">Create Account</button>
+          <div id="signup-terms" class="text-center form-smalltext">
+            By creating an account, you agree to<br>
+            <a href="#" target="_blank">Terms &amp; Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+          </div>
+          <div class="text-center form-smalltext">
+            Already have an account?
+            <a href="/login">Log In</a>
+          </div>
+        </form>
         </div>
       </div>
       </div>

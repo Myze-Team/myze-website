@@ -12,3 +12,8 @@
 .card-title {
   margin-bottom: 0px;
 }
+
+.form-smalltext {
+  font-size: 14px;
+  margin-top: 10px;
+}
