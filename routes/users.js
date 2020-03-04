@@ -1,7 +1,6 @@
 require('dotenv').config()
 const router = require('express').Router()
 const bcrypt = require('bcryptjs')
-const jwt = require('jsonwebtoken')
 
 // load user model
 const User = require('../models/User')
@@ -9,7 +8,11 @@ const User = require('../models/User')
 // load validation helpers
 const validator = require('../validation/validator')
 
-router.post('/register', (req, res) => {
+router.get('/user', (req, res) => {
+  res.render('register', { message: req.flash('info') })
+})
+
+router.post('/user', (req, res) => {
   const { errors, isValid } = validator.validateRegisterData(req.body)
 
   if (!isValid)

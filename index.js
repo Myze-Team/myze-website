@@ -41,10 +41,6 @@ app.get('/', (req, res) => {
   res.render('landing')
 })
 
-app.get('/register', (req, res) => {
-  res.render('register', { message: req.flash('info') })
-})
-
 app.get('/lmao', (req, res) => {
   req.flash('error_msg', 'cool')
   res.redirect('/register')
