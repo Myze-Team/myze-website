@@ -8,11 +8,13 @@ const User = require('../models/User')
 // load validation helpers
 const validator = require('../validation/validator')
 
-router.get('/user', (req, res) => {
+// new user form (GET)
+router.get('/new', (req, res) => {
   res.render('register', { message: req.flash('info') })
 })
 
-router.post('/user', (req, res) => {
+// create user (POST)
+router.post('/', (req, res) => {
   const { errors, isValid } = validator.validateRegisterData(req.body)
 
   if (!isValid)
