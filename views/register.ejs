@@ -1,4 +1,5 @@
-<div class="container">
+<%- include('partials/user-navbar'); %>
+<div class="container full-height">
   <div class="row">
     <div class="d-flex p-2 justify-content-center col-md-12">
       <div class="col-lg-6 col-md-10 col-sm-12">
@@ -27,6 +28,16 @@
               </div>
             </div>
             <button type="submit" class="btn btn-block btn-primary custom-btn">Create Account</button>
+            <div class="row text-line">
+              <div class="col-5">
+                <hr>
+              </div>
+              <div class="col-2 text-center text">or</div>
+              <div class="col-5">
+                <hr>
+              </div>
+            </div>
+            <button type="button" class="btn btn-block btn-google custom-btn"><img class="google-icon" src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-black-and-white.png">Sign up with Google</button>
             <div id="signup-terms" class="text-center form-smalltext">
               By creating an account, you agree to<br>
               <a href="#" target="_blank">Terms &amp; Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>

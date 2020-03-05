@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 
 app.get('/lmao', (req, res) => {
   req.flash('error_msg', 'cool')
-  res.redirect('/register')
+  res.redirect('/users/new')
 })
 
 /*
