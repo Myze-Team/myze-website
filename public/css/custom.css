@@ -13,7 +13,24 @@
   margin-bottom: 0px;
 }
 
+.form-header {
+  font-size: 24px;
+  color: black;
+}
+
 .form-smalltext {
   font-size: 14px;
   margin-top: 10px;
+}
+
+.custom-btn {
+  border-radius: 4px !important;
+}
+
+.custom-btn:hover {
+  top: 0px !important;
+}
+
+.signup-card {
+  padding: 50px;
 }
