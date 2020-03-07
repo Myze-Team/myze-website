@@ -25,7 +25,7 @@ module.exports = function() {
     if (!Validator.isLength(data.password, { min: 6, max: 30 }))
       errors.password = "Password must be at least 6 characters"
 
-    if (!Validator.equals(data.password, data.password2))
+    if (!Validator.equals(data.password, data.passwordConfirm))
       errors.passwordConfirm = "Passwords must match"
 
     return {
