@@ -24,6 +24,10 @@
   margin-top: 10px;
 }
 
+.form-bottomtext {
+  margin-top: 50px;
+}
+
 .custom-btn {
   border-radius: 4px !important;
 }
@@ -33,7 +37,7 @@
 }
 
 .signup-card {
-  padding: 50px;
+  padding: 50px 50px 20px 50px;
 }
 
 .user-navbar {
@@ -46,6 +50,7 @@
 .user-navbar .navbar-brand {
   color: #000;
   font-size: 2rem;
+  margin-right: 0;
 }
 
 .text-line {
@@ -90,4 +95,8 @@
   width: 18px;
   margin-right: 10px;
   margin-top: -3px;
+}
+
+.no-margin {
+  margin: 0;
 }

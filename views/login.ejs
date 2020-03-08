@@ -6,9 +6,9 @@
       <div class="card">
         <div class="card-body signup-card">
           <div class="form-header text-center">
-            Create an account with <span style="color: #4285f4">myze</span>
+            Login
           </div>
-          <form method="post" action="/register">
+          <form method="post" action="/login">
             <div class="row form-group">
               <div class="col-md-12">
                 <label for="email-input" class="text-black">Email</label>
@@ -19,15 +19,13 @@
               <div class="col-md-12">
                 <label for="password-input" class="text-black">Password</label>
                 <input id="password-input" class="form-control rounded-0" name="password" type="password" required></input>
+                <div class="float-right form-smalltext">
+                  Forgot
+                  <a href="/users/edit">Username/Password?</a>
+                </div>
               </div>
             </div>
-            <div class="row form-group">
-              <div class="col-md-12">
-                <label for="password2-input" class="text-black">Confirm Password</label>
-                <input id="password2-input" class="form-control rounded-0" name="password2" type="password" required></input>
-              </div>
-            </div>
-            <button type="submit" class="btn btn-block btn-primary custom-btn">Create Account</button>
+            <button type="submit" class="btn btn-block btn-primary custom-btn">Login</button>
             <div class="row text-line">
               <div class="col-5">
                 <hr>
@@ -37,16 +35,12 @@
                 <hr>
               </div>
             </div>
-            <button type="button" class="btn btn-block btn-google custom-btn"><img class="google-icon" src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-black-and-white.png">Sign up with Google</button>
-            <div id="signup-terms" class="text-center form-smalltext">
-              By creating an account, you agree to<br>
-              <a href="#" target="_blank">Terms &amp; Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
-            </div>
-            <div class="text-center form-smalltext">
-              Already have an account?
-              <a href="/login">Log In</a>
-            </div>
           </form>
+          <button type="button" class="btn btn-block btn-google custom-btn"><img class="google-icon" src="https://cdn.freebiesupply.com/logos/large/2x/google-icon-logo-black-and-white.png">Login with Google</button>
+          <div class="text-center form-smalltext form-bottomtext">
+            Don't have an account?
+            <a href="/users/new">Sign Up</a>
+          </div>
         </div>
       </div>
       </div>

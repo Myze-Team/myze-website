@@ -16,6 +16,7 @@ app.set('view engine', 'ejs');
 
 // json body parser
 app.use(express.json())
+app.use(express.urlencoded())
 
 // passport middleware
 app.use(passport.initialize())

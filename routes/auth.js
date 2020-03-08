@@ -11,8 +11,7 @@ const validator = require('../validation/validator')()
 
 // login form
 router.get('/', (req, res) => {
-  //TODO: Andy
-  res.send("TODO")
+  res.render('login')
 })
 
 router.post('/', (req, res, next) => {

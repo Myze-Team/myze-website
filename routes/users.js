@@ -11,7 +11,7 @@ const validator = require('../validation/validator')()
 
 // new user form (GET)
 router.get('/new', (req, res) => {
-  res.render('register', { message: req.flash('info') })
+  res.render('register')
 })
 
 // create user (POST)
@@ -21,8 +21,9 @@ router.get('/new', (req, res) => {
 // password: <password>
 // passwordConfirm: <password>
 //
-router.post('/', (req, res) => {
+router.post('/new', (req, res) => {
   console.log("VAL" + validator)
+  
   const { errors, isValid } = validator.validateRegisterData(req.body)
 
   if (!isValid)
