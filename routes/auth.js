@@ -1,53 +1,41 @@
 require('dotenv').config()
 const router = require('express').Router()
-const bcrypt = require('bcryptjs')
+const passport = require('passport')
 const jwt = require('jsonwebtoken')
 
 // load user model
 const User = require('../models/User')
 
 // load validation helpers
-const validator = require('../validation/validator')
+const validator = require('../validation/validator')()
 
-/*
-router.post('/login', (req, res) => {
-  // Form validationconst { errors, isValid } = validateLoginInput(req.body);// Check validation
-  if (!isValid) {
-    return res.status(400).json(errors);
-  }const email = req.body.email;
-  const password = req.body.password;// Find user by email
-  User.findOne({ email }).then(user => {
-    // Check if user exists
-    if (!user) {
-      return res.status(404).json({ emailnotfound: "Email not found" });
-    }// Check password
-    bcrypt.compare(password, user.password).then(isMatch => {
-      if (isMatch) {
-        // User matched
-        // Create JWT Payload
-        const payload = {
-          id: user.id,
-          name: user.name
-        };// Sign token
-        jwt.sign(
-          payload,
-          keys.secretOrKey,
-          {
-            expiresIn: 31556926 // 1 year in seconds
-          },
-          (err, token) => {
-            res.json({
-              success: true,
-              token: "Bearer " + token
-            });
-          }
-        );
-      } else {
-        return res
-          .status(400)
-          .json({ passwordincorrect: "Password incorrect" });
-      }
-    });
-  });
-});
-*/
+// login form
+router.get('/', (req, res) => {
+  //TODO: Andy
+  res.send("TODO")
+})
+
+router.post('/', (req, res, next) => {
+  // TODO: should we still sanitize the form input? or should we leave that to the frontend
+  passport.authenticate('login', (err, user, info) => {
+    if (err)
+      console.log(err)
+
+    if (info !== undefined) {
+      console.log(info.message)
+      res.send(info.message)
+      return
+    }
+
+    // should change this to UUID later
+    const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET)
+    res.status(200).send({
+      auth: true,
+      token: token,
+      message: 'Login authenticated successfully',
+    })
+  })(req, res, next);
+})
+
+
+module.exports = router;
