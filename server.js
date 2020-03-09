@@ -9,6 +9,7 @@ const passport = require('passport')
 const app = express()
 
 require('./config/passport')
+require('./firebase/auth')
 
 // set ejs view engine
 app.use(expressLayouts);
@@ -53,24 +54,15 @@ app.get('/lmao', (req, res) => {
 })
 
 // link routes
-app.use('/users', require('./routes/users.js'))
-app.use('/login', require('./routes/auth.js'))
-app.get('/testauth', (req, res, next) => {
-  passport.authenticate('jwt', { session: false }, (err, user, info) => {
-    if (err)
-      console.log(err)
+app.use('/users', require('./routes/users'))
+app.use('/login', require('./routes/login'))
 
-    if (info !== undefined) {
-      console.log(info.message)
-      res.send(info.message)
-      return
-    }
-
-    res.status(200).send({
-      auth: true,
-      message: 'Authenticated user. You are currently logged in as ' + user.email,
-    })
-  })(req, res, next)
+app.use('/testauth', require('./firebase/authenticate'))
+app.get('/testauth', (req, res) => {
+  res.status(200).send({
+    auth: true,
+    message: 'Authenticated user. You are currently logged in as ' + res.locals.uid,
+  })
 })
 
 // listen on port

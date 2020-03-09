@@ -11,10 +11,10 @@ const validator = require('../validation/validator')()
 
 // login form
 router.get('/', (req, res) => {
-  //TODO: Andy
-  res.send("TODO")
+  res.render('login', { message: req.flash('info') })
 })
 
+// TODO update to support firebase
 router.post('/', (req, res, next) => {
   // TODO: should we still sanitize the form input? or should we leave that to the frontend
   passport.authenticate('login', (err, user, info) => {

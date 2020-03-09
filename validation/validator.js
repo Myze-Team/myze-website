@@ -1,7 +1,7 @@
 const Validator = require('validator')
 const isEmpty = require('is-empty')
 
-module.exports = function() {
+module.exports = () => {
   function validateRegisterData(data) {
     let errors = {}
 
