@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "./node_modules/nodemon/bin/nodemon.js index.js"
+    "dev": "./node_modules/nodemon/bin/nodemon.js server.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +37,7 @@
     "validator": "^12.2.0"
   },
   "devDependencies": {
+    "firebase": "^7.10.0",
     "nodemon": "^2.0.2"
   }
 }

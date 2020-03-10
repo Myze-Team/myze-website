@@ -1,3 +1,6 @@
+// TEMPORARILY OBSOLETE
+//
+// wil be used once we switch firebase out for 0Auth
 require('dotenv').config()
 const passport = require('passport')
 const LocalStrategy = require("passport-local").Strategy

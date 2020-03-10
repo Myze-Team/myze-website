@@ -10,4 +10,7 @@ package-lock.json
 
 # .env
 .env
+
+# Firebase
 serviceAccountKey.json
+firebaseConfig.json
