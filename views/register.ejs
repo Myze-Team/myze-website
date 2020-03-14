@@ -8,7 +8,7 @@
           <div class="form-header text-center">
             Create an account with <span style="color: #4285f4">myze</span>
           </div>
-          <form method="post" action="/register">
+          <form method="post" action="/users/new">
             <div class="row form-group">
               <div class="col-md-12">
                 <label for="email-input" class="text-black">Email</label>
@@ -24,7 +24,7 @@
             <div class="row form-group">
               <div class="col-md-12">
                 <label for="password2-input" class="text-black">Confirm Password</label>
-                <input id="password2-input" class="form-control rounded-0" name="password2" type="password" required></input>
+                <input id="password2-input" class="form-control rounded-0" name="passwordConfirm" type="password" required></input>
               </div>
             </div>
             <button type="submit" class="btn btn-block btn-primary custom-btn">Create Account</button>
@@ -42,7 +42,7 @@
               By creating an account, you agree to<br>
               <a href="#" target="_blank">Terms &amp; Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
             </div>
-            <div class="text-center form-smalltext">
+            <div class="text-center form-smalltext form-bottomtext">
               Already have an account?
               <a href="/login">Log In</a>
             </div>
