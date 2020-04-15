@@ -1,0 +1,10 @@
+@import "../../styles/gamut";
+
+.standardButton {
+  text-decoration: none;
+  color: $mwhite;
+  background-color: $mturquoise;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  font-weight: bold;
+}

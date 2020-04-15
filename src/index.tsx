@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import 'typeface-open-sans';
 import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
+import Cover from './pages/cover';
 
 const App: React.FC = () => {
-  return (<div></div>);
+  return (<Cover />);
 }
 
 ReactDOM.render(

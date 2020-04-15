@@ -1,0 +1,27 @@
+@import "../../styles/constants";
+@import "../../styles/gamut";
+
+.coverPage {
+  display: flex;
+  height: 100vh;
+  width: 100vw - 2 * $sidepadding;
+  padding: 0 $sidepadding;
+  justify-content: space-between;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    * {
+      width: fit-content;
+    }
+    .standardButton {
+      margin-top: 1rem;
+    }
+    h1 {
+      color: $mdgray;
+      span {
+        color: $mturquoise;
+      }
+    }
+  }
+}
