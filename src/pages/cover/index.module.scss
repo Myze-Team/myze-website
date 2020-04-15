@@ -25,3 +25,10 @@
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .coverPage {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}

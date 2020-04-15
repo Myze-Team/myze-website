@@ -4,7 +4,43 @@
 .howItWorksPage {
   width: 100vw - 2 * $sidemargin;
   margin: 0 auto;
+  padding-bottom: 2rem;
   h1 {
     color: $mdgray;
+  }
+  h2 {
+    color: $mlgray;
+    padding-bottom: 2rem;
+  }
+  .pageContainer {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 50vw - $sidemargin;
+      * {
+        width: fit-content;
+      }
+    }
+    .imageContainer {
+      .leftImg {
+        align-self: start;
+      }
+      .centerImg {
+        align-self: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .pageContainer {
+    flex-direction: column;
+    justify-content: center;
+    div {
+      width: 100% !important;
+    }
   }
 }
