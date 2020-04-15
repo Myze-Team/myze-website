@@ -4,9 +4,15 @@ import 'typeface-open-sans';
 import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 import Cover from './pages/cover';
+import HowItWorks from './pages/howitworks';
 
 const App: React.FC = () => {
-  return (<Cover />);
+  return (
+    <>
+      <Cover />
+      <HowItWorks />
+    </>
+  );
 }
 
 ReactDOM.render(

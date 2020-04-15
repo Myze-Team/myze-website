@@ -1,0 +1,10 @@
+@import "../../styles/constants";
+@import "../../styles/gamut";
+
+.howItWorksPage {
+  width: 100vw - 2 * $sidemargin;
+  margin: 0 auto;
+  h1 {
+    color: $mdgray;
+  }
+}
