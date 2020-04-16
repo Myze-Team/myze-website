@@ -10,9 +10,9 @@ const Cover: React.FC = () => {
       <div>
         <h1>Using <span>Big Data.</span></h1>
         <h1>To Minimize e-Retail Returns.</h1>
-        <StandardButton href="#getting-started" text="Getting Started" className={styles.standardButton} />
+        <StandardButton href='#getting-started' text='Getting Started' className={styles.standardButton} />
       </div>
-      <img src={CoolGraphSvg} alt="Graph Algorithm Illustration" />
+      <img src={CoolGraphSvg} alt='Graph Algorithm Illustration' />
     </div>
   );
 }

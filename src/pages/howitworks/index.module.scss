@@ -4,12 +4,13 @@
 .howItWorksPage {
   width: 100vw - 2 * $sidemargin;
   margin: 0 auto;
-  padding-bottom: 2rem;
+  padding-bottom: $sectionpadding;
   h1 {
     color: $mdgray;
   }
   h2 {
     color: $mlgray;
+    font-weight: 600;
     padding-bottom: 2rem;
   }
   .pageContainer {

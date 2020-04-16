@@ -5,12 +5,14 @@ import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
 import Cover from './pages/cover';
 import HowItWorks from './pages/howitworks';
+import AboutUs from './pages/aboutus';
 
 const App: React.FC = () => {
   return (
     <>
       <Cover />
       <HowItWorks />
+      <AboutUs />
     </>
   );
 }

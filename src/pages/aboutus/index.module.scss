@@ -1,0 +1,66 @@
+@import "../../styles/constants";
+@import "../../styles/gamut";
+
+.aboutUsPage {
+  width: 100vw - 2 * $sidemargin;
+  margin: 0 auto;
+  padding-bottom: $sectionpadding;
+  h1 {
+    color: $mdgray;
+  }
+  .subtitle {
+    color: $morange;
+    font-weight: lighter;
+  }
+  .descriptionContainer {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    h1 {
+      color: $mlgray;
+      font-weight: lighter;
+      padding-bottom: 2rem;
+    }
+    padding-bottom: 2rem;
+  }
+  .missionContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: $mlgray;
+      font-style: italic;
+    }
+    .myzeLogo {
+      width: 10rem;
+      padding: 3rem 0;
+    }
+    h3 {
+      color: $mlgray;
+      font-weight: lighter;
+    }
+    padding-bottom: 4rem;
+  }
+  .supportersContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      color: $mlgray;
+      font-style: italic;
+    }
+    .theBasementLogo {
+      width: 20rem;
+      padding: 3rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .descriptionContainer {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

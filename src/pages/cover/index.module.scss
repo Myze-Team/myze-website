@@ -7,6 +7,7 @@
   width: 100vw - 2 * $sidemargin;
   margin: 0 auto;
   justify-content: space-between;
+  padding-bottom: $sectionpadding;
   div {
     display: flex;
     flex-direction: column;

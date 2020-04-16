@@ -7,12 +7,12 @@ import HIW3Svg from '../../assets/img/hiw-3.svg';
 const HowItWorks: React.FC = () => {
   return (
     <div className={styles.howItWorksPage}>
-      <h1 className="sectionTitle">How It Works?</h1>
+      <h1 className='sectionTitle'>How It Works?</h1>
       <div className={styles.pageContainer}>
         <div className={styles.imageContainer}>
-          <img src={HIW1Svg} alt="Cool Works 1" className={styles.leftImg} />
-          <img src={HIW2Svg} alt="Cool Works 2" className={styles.centerImg} />
-          <img src={HIW3Svg} alt="Cool Works 3" className={styles.leftImg} />
+          <img src={HIW1Svg} alt='Cool Works 1' className={styles.leftImg} />
+          <img src={HIW2Svg} alt='Cool Works 2' className={styles.centerImg} />
+          <img src={HIW3Svg} alt='Cool Works 3' className={styles.leftImg} />
         </div>
         <div>
           <h1>Input 3-4 shirts that you own</h1>
