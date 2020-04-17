@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import 'typeface-open-sans';
 import './styles/index.scss';
 import * as serviceWorker from './serviceWorker';
+import Navbar from './pages/navbar';
 import Cover from './pages/cover';
 import HowItWorks from './pages/howitworks';
 import AboutUs from './pages/aboutus';
@@ -10,6 +11,7 @@ import AboutUs from './pages/aboutus';
 const App: React.FC = () => {
   return (
     <>
+      <Navbar />
       <Cover />
       <HowItWorks />
       <AboutUs />
