@@ -1,2 +1,25 @@
 $sidemargin: 10vw;
 $sectionpadding: 5rem;
+
+.responsiveContainer {
+    width: 1200px;
+}
+
+@media only screen and (max-width: 1400px) {
+    .responsiveContainer {
+        width: 1000px !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .responsiveContainer {
+        width: 800px !important;
+    }
+}
+
+//mobile
+@media only screen and (max-width: 900px) {
+    .responsiveContainer {
+        width: 100vw !important;
+    }
+}

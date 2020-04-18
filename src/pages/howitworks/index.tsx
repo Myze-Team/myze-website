@@ -6,7 +6,7 @@ import HIW3Svg from '../../assets/img/hiw-3.svg';
 
 const HowItWorks: React.FC = () => {
   return (
-    <div className={styles.howItWorksPage}>
+    <div className={`${styles.howItWorksPage} ${styles.responsiveContainer}`}>
       <h1 className='sectionTitle'>How It Works?</h1>
       <div className={styles.pageContainer}>
         <div className={styles.imageContainer}>

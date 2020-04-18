@@ -1,33 +1,11 @@
 @import "../../styles/constants";
 @import "../../styles/gamut";
 
-.responsiveContainer {
-    width: 1200px;
-}
-
-@media only screen and (max-width: 1400px) {
-    .responsiveContainer {
-        width: 1000px !important;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .responsiveContainer {
-        width: 800px !important;
-    }
-}
-
-//mobile
-@media only screen and (max-width: 900px) {
-    .responsiveContainer {
-        width: 100vw !important;
-    }
-}
-
 .nav {
   position: fixed;
   top: 0;
-  width: 100vw;
+  width: 100%;
+  margin: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
   .navbar {
@@ -35,6 +13,10 @@
     margin: 0 auto;
     justify-content: space-between;
   }
+}
+
+.scrolled {
+    background-color: black;
 }
 
 .logoContainer {

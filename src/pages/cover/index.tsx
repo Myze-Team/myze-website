@@ -6,7 +6,7 @@ import StandardButton from '../../components/standardbutton';
 
 const Cover: React.FC = () => {
   return (
-    <div className={styles.coverPage}>
+    <div className={`${styles.coverPage} ${styles.responsiveContainer}`}>
       <div>
         <h1>Using <span>Big Data.</span></h1>
         <h1>To Minimize e-Retail Returns.</h1>

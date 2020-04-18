@@ -3,6 +3,7 @@ import styles from './index.module.scss';
 import MyzePng from '../../assets/img/myze.png';
 
 const Navbar: React.FC = () => {
+  //${this.state.isTop ? styles.scrolled : ""}
   return (
     <div className={styles.nav}>
       <div className={`${styles.navbar} ${styles.responsiveContainer}`}>
