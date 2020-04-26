@@ -4,6 +4,8 @@ module.exports = {
     project: './tsconfig.json',
   },
   rules: {
+    'react/no-array-index-key': 'off',
+    'operator-linebreak': 'off',
     'react/prop-types': 'off',
   },
 };
