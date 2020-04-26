@@ -15,13 +15,21 @@
       width: fit-content;
     }
     .standardButton {
-      margin-top: 1rem;
+      margin-top: 2rem;
+    }
+    div {
+      display: inline-block;
+      font-weight: bolder;
+      color: $mdgray;
+      .bigData {
+        color: $mturquoise;
+      }
+      span {
+        font-size: 2rem;
+      }
     }
     h1 {
       color: $mdgray;
-      span {
-        color: $mturquoise;
-      }
     }
   }
 }

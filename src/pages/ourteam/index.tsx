@@ -1,7 +1,5 @@
 import React from 'react';
 
-const OurTeam: React.FC = () => {
-  return (<div></div>);
-}
+const OurTeam: React.FC = () => <div />;
 
 export default OurTeam;

@@ -8,22 +8,20 @@ import Cover from './pages/cover';
 import HowItWorks from './pages/howitworks';
 import AboutUs from './pages/aboutus';
 
-const App: React.FC = () => {
-  return (
-    <>
-      <Navbar />
-      <Cover />
-      <HowItWorks />
-      <AboutUs />
-    </>
-  );
-}
+const App: React.FC = () => (
+  <>
+    <Navbar />
+    <Cover />
+    <HowItWorks />
+    <AboutUs />
+  </>
+);
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
