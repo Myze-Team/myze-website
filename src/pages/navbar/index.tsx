@@ -5,7 +5,7 @@ import MyzeSvg from '../../assets/img/myze.svg';
 const Navbar: React.FC = () => (
   // ${this.state.isTop ? styles.scrolled : ""}
   <div className={styles.nav}>
-    <div className={`${styles.navbar} ${styles.responsiveContainer}`}>
+    <div className={`${styles.navbar} responsiveContainer`}>
       <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
       <div className={styles.navbarList}>
         <div>How It Works</div>

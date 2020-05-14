@@ -5,7 +5,7 @@ import MyzeSvg from '../../assets/img/myze.svg';
 import TheBasementPng from '../../assets/img/thebasement.png';
 
 const AboutUs: React.FC = () => (
-  <div className={`${styles.aboutUsPage} ${styles.responsiveContainer}`}>
+  <div className={`${styles.aboutUsPage} responsiveContainer`}>
     <h1 className="sectionTitle">About Us</h1>
     <h1 className={styles.subtitle}>
       we are just a startup that wants to change the way we shop online.

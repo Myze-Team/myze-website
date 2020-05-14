@@ -7,3 +7,29 @@
   font-size: 3rem;
   padding-bottom: 1rem;
 }
+
+.responsiveContainer {
+  width: 1200px;
+}
+
+@media only screen and (max-width: 1400px) {
+  .responsiveContainer {
+    width: 1000px !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .responsiveContainer {
+    width: 800px !important;
+  }
+}
+
+//mobile
+@media only screen and (max-width: 900px) {
+  .responsiveContainer {
+    margin: 0 !important;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    width: calc(100vw - 4rem) !important;
+  }
+}

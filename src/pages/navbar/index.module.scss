@@ -1,11 +1,11 @@
-@import "../../styles/constants";
-@import "../../styles/gamut";
+@import '../../styles/constants';
+@import '../../styles/gamut';
 
 .nav {
   position: fixed;
   top: 0;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding-top: 2rem;
   padding-bottom: 2rem;
   .navbar {
@@ -16,37 +16,42 @@
 }
 
 .scrolled {
-    background-color: black;
+  background-color: black;
 }
 
 .logoContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .myzeLogo {
-    width: 57px;
+  width: 57px;
 }
 
 .navbarList {
-    display: flex;
-    align-items: center;
-    div {
-        margin-left: 2rem;
-        cursor: pointer;
-        font-weight: 700;
-        display: inline-block;
-    }
-    div:not(:last-child) {
-        color: $mdgray;
-        font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  div {
+    margin-left: 2rem;
+    cursor: pointer;
+    font-weight: 700;
+    display: inline-block;
+  }
+  div:not(:last-child) {
+    color: $mdgray;
+    font-size: 1.25rem;
+  }
+  div:last-child {
+    padding: 8px 30px 8px 30px;
+    color: $morange;
+    border: solid 1px $morange;
+    border-radius: 4px;
+  }
+}
 
-    }
-    div:last-child {
-        padding: 8px 30px 8px 30px;
-        color: $morange;
-        border: solid 1px $morange;
-        border-radius: 4px;
-    }
+@media screen and (max-width: 700px) {
+  .navbarList {
+    display: none;
+  }
 }
