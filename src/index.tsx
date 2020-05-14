@@ -10,14 +10,31 @@ import HowItWorks from './pages/howitworks';
 import AboutUs from './pages/aboutus';
 import amplifyConfig from './configs/amplify';
 
-const App: React.FC = () => (
-  <>
-    <Navbar />
-    <Cover />
-    <HowItWorks />
-    <AboutUs />
-  </>
-);
+const App: React.FC = () => {
+  const [scrolled, setScrolled] = React.useState('');
+  const handleScroll = React.useCallback(() => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (currentScroll < 50) {
+      setScrolled('');
+    } else {
+      setScrolled('navbarTop');
+    }
+  }, []);
+  React.useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [handleScroll]);
+  return (
+    <>
+      <Navbar scrolled={scrolled} />
+      <Cover />
+      <HowItWorks />
+      <AboutUs />
+    </>
+  );
+};
 
 Amplify.configure(amplifyConfig);
 

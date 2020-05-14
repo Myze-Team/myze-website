@@ -2,9 +2,13 @@ import React from 'react';
 import styles from './index.module.scss';
 import MyzeSvg from '../../assets/img/myze.svg';
 
-const Navbar: React.FC = () => (
+interface NavbarProps {
+  scrolled: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ scrolled }) => (
   // ${this.state.isTop ? styles.scrolled : ""}
-  <div className={styles.nav}>
+  <div className={`${styles.nav} ${scrolled}`}>
     <div className={`${styles.navbar} responsiveContainer`}>
       <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
       <div className={styles.navbarList}>

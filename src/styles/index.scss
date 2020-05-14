@@ -27,9 +27,12 @@
 //mobile
 @media only screen and (max-width: 900px) {
   .responsiveContainer {
-    margin: 0 !important;
     padding-left: 2rem;
     padding-right: 2rem;
     width: calc(100vw - 4rem) !important;
   }
+}
+
+.navbarTop {
+  background-color: burlywood;
 }
