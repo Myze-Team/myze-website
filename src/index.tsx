@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'typeface-open-sans';
 import './styles/index.scss';
+import { Amplify } from 'aws-amplify';
 import * as serviceWorker from './serviceWorker';
 import Navbar from './pages/navbar';
 import Cover from './pages/cover';
 import HowItWorks from './pages/howitworks';
 import AboutUs from './pages/aboutus';
+import amplifyConfig from './configs/amplify';
 
 const App: React.FC = () => (
   <>
@@ -16,6 +18,8 @@ const App: React.FC = () => (
     <AboutUs />
   </>
 );
+
+Amplify.configure(amplifyConfig);
 
 ReactDOM.render(
   <React.StrictMode>
