@@ -12,10 +12,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => (
     <div className={`${styles.navbar} responsiveContainer`}>
       <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
       <div className={styles.navbarList}>
-        <div>How It Works</div>
-        <div>About Us</div>
-        <div>Contact Us</div>
-        <div>Sign In</div>
+        <a>How It Works</a>
+        <a>About Us</a>
+        <a>Contact Us</a>
+        <a>Sign In</a>
       </div>
     </div>
   </div>
