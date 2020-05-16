@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'typeface-open-sans';
+import 'typeface-nunito-sans';
 import 'normalize.css';
 import 'focus-visible/dist/focus-visible.min';
 import './styles/index.scss';

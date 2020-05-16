@@ -28,7 +28,7 @@
     "react-scripts": "3.4.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
-    "typeface-open-sans": "^0.0.75",
+    "typeface-nunito-sans": "^0.0.72",
     "typescript": "~3.7.2"
   },
   "scripts": {

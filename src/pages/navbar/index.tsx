@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.module.scss';
-import MyzeSvg from '../../assets/img/myze.svg';
+import MyzeSvg from '../../assets/img/myze-icon.svg';
 
 interface NavbarProps {
   scrolled: string;
