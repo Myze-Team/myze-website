@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
-import HIW1Svg from '../../assets/img/hiw-1.svg';
-import HIW2Svg from '../../assets/img/hiw-2.svg';
-import HIW3Svg from '../../assets/img/hiw-3.svg';
+import HIW1Svg from '../../../assets/img/hiw-1.svg';
+import HIW2Svg from '../../../assets/img/hiw-2.svg';
+import HIW3Svg from '../../../assets/img/hiw-3.svg';
 
 const HowItWorks: React.FC = () => (
   <div className={`${styles.howItWorksPage} responsiveContainer`} id="how-it-works">

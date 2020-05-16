@@ -6,43 +6,14 @@ import 'focus-visible/dist/focus-visible.min';
 import './styles/index.scss';
 import { Amplify } from 'aws-amplify';
 import * as serviceWorker from './serviceWorker';
-import Navbar from './pages/navbar';
-import Cover from './pages/cover';
-import HowItWorks from './pages/howitworks';
-import AboutUs from './pages/aboutus';
 import amplifyConfig from './configs/amplify';
-
-const App: React.FC = () => {
-  const [scrolled, setScrolled] = React.useState('');
-  const handleScroll = React.useCallback(() => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentScroll < 50) {
-      setScrolled('');
-    } else {
-      setScrolled('navbarTop');
-    }
-  }, []);
-  React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [handleScroll]);
-  return (
-    <>
-      <Navbar scrolled={scrolled} />
-      <Cover />
-      <HowItWorks />
-      <AboutUs />
-    </>
-  );
-};
+import MainPage from './pages/main';
 
 Amplify.configure(amplifyConfig);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MainPage />
   </React.StrictMode>,
   document.getElementById('root'),
 );

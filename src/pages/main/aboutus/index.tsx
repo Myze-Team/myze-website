@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
-import About1Svg from '../../assets/img/about-1.svg';
-import MyzeSvg from '../../assets/img/myze.svg';
-import TheBasementPng from '../../assets/img/thebasement.png';
+import About1Svg from '../../../assets/img/about-1.svg';
+import MyzeSvg from '../../../assets/img/myze.svg';
+import TheBasementPng from '../../../assets/img/thebasement.png';
 
 const AboutUs: React.FC = () => (
   <div className={`${styles.aboutUsPage} responsiveContainer`} id="about-us">

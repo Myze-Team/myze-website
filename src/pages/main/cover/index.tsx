@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
 
-import CoolGraphSvg from '../../assets/img/cool-graph.svg';
-import StandardButton from '../../components/standardbutton';
+import CoolGraphSvg from '../../../assets/img/cool-graph.svg';
+import StandardButton from '../../../components/standardbutton';
 
 const Cover: React.FC = () => (
   <div className={`${styles.coverPage} responsiveContainer`} id="cover">
