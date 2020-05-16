@@ -43,7 +43,7 @@
 .navbarList {
   display: flex;
   align-items: center;
-  button {
+  button, .loginButton {
     margin-left: 2rem;
     cursor: pointer;
     font-weight: 700;
@@ -51,15 +51,16 @@
     border-style: none;
     background-color: transparent;
   }
-  button:not(:last-child) {
+  button {
     color: $mdgray;
     font-size: 1.25rem;
   }
-  button:last-child {
+  .loginButton {
     padding: 8px 30px 8px 30px;
     color: $morange;
     border: solid 1px $morange;
     border-radius: 4px;
+    text-decoration: none;
   }
 }
 

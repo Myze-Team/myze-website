@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styles from './index.module.scss';
 import MyzeSvg from '../../../assets/img/myze-icon.svg';
 
@@ -29,7 +30,9 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => (
           About Us
         </button>
         <button type="button">Contact Us</button>
-        <button type="button">Sign In</button>
+        <NavLink to="/login" className={styles.loginButton}>
+          Sign In
+        </NavLink>
       </div>
     </div>
   </div>
