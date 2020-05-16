@@ -3,8 +3,8 @@ export default {
     oauth: {
       domain: process.env.REACT_APP_COGNITO_DOMAIN,
       scope: ['email', 'profile', 'openid'],
-      redirectSignIn: 'http://localhost:3000',
-      redirectSignOut: 'http://localhost:3000',
+      redirectSignIn: process.env.REACT_APP_SIGNIN_REDIRECT,
+      redirectSignOut: process.env.REACT_APP_SIGNOUT_REDIRECT,
       responseType: 'code',
     },
     mandatorySignIn: true,
