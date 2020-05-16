@@ -6,8 +6,8 @@
   top: 0;
   width: 100%;
   margin: 0 auto;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: padding .25s;
   .navbar {
     display: flex;
@@ -27,23 +27,25 @@
 }
 
 .myzeLogo {
-  width: 40px;
+  width: 50px;
 }
 
 .navbarList {
   display: flex;
   align-items: center;
-  a {
+  button {
     margin-left: 2rem;
     cursor: pointer;
     font-weight: 700;
     display: inline-block;
+    border-style: none;
+    background-color: transparent;
   }
-  a:not(:last-child) {
+  button:not(:last-child) {
     color: $mdgray;
     font-size: 1.25rem;
   }
-  a:last-child {
+  button:last-child {
     padding: 8px 30px 8px 30px;
     color: $morange;
     border: solid 1px $morange;
