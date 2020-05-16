@@ -13,7 +13,10 @@ const scrollTo = (id: string) => {
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => (
   <div className={`${styles.nav} ${scrolled}`}>
     <div className={`${styles.navbar} responsiveContainer`}>
-      <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
+      <div className={styles.logoContainer}>
+        <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
+        <div className={styles.logoText}>myze</div>
+      </div>
       <div className={styles.navbarList}>
         <button type="button" onClick={() => scrollTo('how-it-works')}>
           How It Works

@@ -22,12 +22,20 @@
 
 .logoContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .myzeLogo {
-  width: 50px;
+  width: 40px;
+  display: inline-block;
+}
+
+.logoText {
+  font-size: 1.75rem;
+  display: inline-block;
+  margin-left: 1rem;
+  color: $morange;
 }
 
 .navbarList {
