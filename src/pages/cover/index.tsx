@@ -5,7 +5,7 @@ import CoolGraphSvg from '../../assets/img/cool-graph.svg';
 import StandardButton from '../../components/standardbutton';
 
 const Cover: React.FC = () => (
-  <div className={`${styles.coverPage} responsiveContainer`}>
+  <div className={`${styles.coverPage} responsiveContainer`} id="cover">
     <div>
       <div>
         <span>Using </span>

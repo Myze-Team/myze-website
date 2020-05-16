@@ -7,16 +7,20 @@ interface NavbarProps {
 }
 
 const scrollTo = (id: string) => {
-  window.scrollTo(0, document.getElementById(id)?.offsetTop! - 100);
+  window.scrollTo({
+    left: 0,
+    top: document.getElementById(id)?.offsetTop! - 100,
+    behavior: 'smooth',
+  });
 };
 
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => (
   <div className={`${styles.nav} ${scrolled}`}>
     <div className={`${styles.navbar} responsiveContainer`}>
-      <div className={styles.logoContainer}>
+      <button type="button" className={styles.logoContainer} onClick={() => scrollTo('cover')}>
         <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
         <div className={styles.logoText}>myze</div>
-      </div>
+      </button>
       <div className={styles.navbarList}>
         <button type="button" onClick={() => scrollTo('how-it-works')}>
           How It Works
