@@ -13,7 +13,7 @@ const Cover: React.FC = () => (
       </div>
       <h1>To Minimize e-Retail Returns.</h1>
       <StandardButton
-        href="#getting-started"
+        href="/login"
         text="Get Started"
         className={styles.standardButton}
       />
