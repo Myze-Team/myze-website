@@ -5,13 +5,13 @@ import 'normalize.css';
 import 'focus-visible/dist/focus-visible.min';
 import './styles/index.scss';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
+import Amplify from 'aws-amplify';
 import * as serviceWorker from './serviceWorker';
 import MainPage from './pages/main';
 import LoginPage from './pages/login';
+import amplifyConfig from './configs/amplify';
 
-/*
 Amplify.configure(amplifyConfig);
-*/
 
 const App: React.FC = () => (
   <Switch>
