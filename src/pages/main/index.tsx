@@ -1,5 +1,4 @@
 import React from 'react';
-import { Auth } from 'aws-amplify';
 import Navbar from './navbar';
 import Cover from './cover';
 import HowItWorks from './howitworks';
@@ -17,9 +16,11 @@ const MainPage: React.FC = () => {
   }, []);
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    /*
     Auth.currentAuthenticatedUser().then((data) => {
       console.log(data);
     });
+    */
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };

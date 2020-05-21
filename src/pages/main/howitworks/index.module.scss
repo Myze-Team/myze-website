@@ -6,6 +6,7 @@
   padding-bottom: $sectionpadding;
   h1 {
     color: $mdgray;
+    margin-top: 0;
   }
   h2 {
     color: $mlgray;
@@ -16,7 +17,7 @@
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    div {
+    .container {
       display: flex;
       flex-direction: column;
       width: 50vw - $sidemargin;
@@ -33,6 +34,40 @@
       }
     }
   }
+  .group {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    z-index: -1;
+    margin-top: 1.5rem;
+    .list {
+      margin-right: 30px;
+      .number {
+        color: rgba(0, 0, 0, 0);;
+        font-size: 3em;
+        -webkit-text-stroke: 1px black;
+        text-stroke: 1px black;
+        margin-top: 5px;
+      }
+      .circle {
+        position: absolute;
+        top: 0;
+        margin-left: 5px;
+        z-index: -1;
+        height: 30px !important;
+        width: 30px !important;
+        background-color: $morange;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+    .text {
+      h2 {
+        font-size: 1.25rem;
+        line-height: 1.25;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -42,5 +77,11 @@
     div {
       width: 100% !important;
     }
+  }
+  .group {
+      flex-direction: column !important;
+  }
+  .group:first-child {
+
   }
 }

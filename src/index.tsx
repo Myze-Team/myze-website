@@ -4,14 +4,14 @@ import 'typeface-nunito-sans';
 import 'normalize.css';
 import 'focus-visible/dist/focus-visible.min';
 import './styles/index.scss';
-import { Amplify } from 'aws-amplify';
 import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
-import amplifyConfig from './configs/amplify';
 import MainPage from './pages/main';
 import LoginPage from './pages/login';
 
+/*
 Amplify.configure(amplifyConfig);
+*/
 
 const App: React.FC = () => (
   <Switch>
