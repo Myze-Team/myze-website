@@ -25,11 +25,14 @@
         color: $mturquoise;
       }
       span {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
     }
     h1 {
       color: $mdgray;
+      font-size: 2.5rem;
+      margin-top: .25rem;
+      margin-bottom: 0;
     }
   }
 }
@@ -38,5 +41,8 @@
   .coverPage {
     flex-direction: column-reverse;
     justify-content: center;
+    img {
+      margin-top: 4rem;
+    }
   }
 }

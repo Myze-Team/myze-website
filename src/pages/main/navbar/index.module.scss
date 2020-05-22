@@ -32,6 +32,7 @@
   border-style: none;
   background-color: transparent;
   cursor: pointer;
+  padding: 0;
 }
 
 .myzeLogo {
@@ -52,14 +53,28 @@
   button, .loginButton {
     margin-left: 2rem;
     cursor: pointer;
-    font-weight: 700;
+    font-weight: 500;
     display: inline-block;
     border-style: none;
     background-color: transparent;
   }
+  button:not(.loginButton) {
+      padding-top: .5rem;
+      padding-bottom: .5rem;
+  }
   button {
-    color: $mdgray;
-    font-size: 1.25rem;
+    font-size: 1rem;
+    transition: color .25s;
+  }
+  button:hover {
+    color: $morange;
+    transition: color .25s;
+  }
+  .active {
+    color: $morange;
+  }
+  .inactive {
+    color: black;
   }
   .loginButton {
     padding: 8px 30px 8px 30px;
@@ -73,5 +88,10 @@
 @media screen and (max-width: 700px) {
   .navbarList {
     display: none;
+  }
+  .nav {
+    position: absolute;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 }
