@@ -1,4 +1,6 @@
 import React from 'react';
+import LoginForm from './loginform';
+import LogoBar from '../../components/logobar';
 
 const LoginPage: React.FC = () => {
   const handleLogin = () => {
@@ -7,9 +9,14 @@ const LoginPage: React.FC = () => {
     */
   };
   return (
+    <>
+    <LogoBar />
+    <LoginForm />
+
     <button type="button" onClick={handleLogin}>
       Login
     </button>
+    </>
   );
 };
 

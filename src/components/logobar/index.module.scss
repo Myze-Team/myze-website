@@ -1,0 +1,36 @@
+@import '../../styles/constants';
+@import '../../styles/gamut';
+
+.nav {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  box-shadow: 4px 0 20px -10px rgba(0,0,0,.2);
+  margin-bottom: 40px;
+  .navbar {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: 900px) {
+      .navbar {
+        justify-content: center;
+      }
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  border-style: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.myzeLogo {
+  width: 40px;
+  display: inline-block;
+}
