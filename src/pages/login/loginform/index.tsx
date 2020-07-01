@@ -19,7 +19,17 @@ const LoginForm: React.FC = () => (
             <div>Password</div>
             <input type="text" name="name" />
           </label>
+          <div className={`${styles.forgotPassword}`}>
+            Forgot <a href="#">Username/Password?</a>
+          </div>
         </div>
+        <div className={`${styles.btn} ${styles.btnRegular}`}>Login</div>
+        <div className={`${styles.textLine}`}>
+            <div className={`${styles.hrContainer}`}><hr /></div>
+            <div className={`${styles.or}`}>or</div>
+            <div className={`${styles.hrContainer}`}><hr /></div>
+        </div>
+        <div className={`${styles.btn} ${styles.btnGoogle}`}>Login with Google</div>
       </form>
     </div>
   </div>
