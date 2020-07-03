@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './index.module.scss';
 
+import GoogleIconPng from '../../../assets/img/google-icon.png';
+
 const LoginForm: React.FC = () => (
   <div className={`${styles.loginFormContainer} responsiveContainer`}>
     <div className={`${styles.loginForm}`}>
@@ -19,7 +21,7 @@ const LoginForm: React.FC = () => (
             <div>Password</div>
             <input type="text" name="name" />
           </label>
-          <div className={`${styles.forgotPassword}`}>
+          <div className={`${styles.subtext} ${styles.forgotPassword}`}>
             Forgot <a href="#">Username/Password?</a>
           </div>
         </div>
@@ -29,7 +31,17 @@ const LoginForm: React.FC = () => (
             <div className={`${styles.or}`}>or</div>
             <div className={`${styles.hrContainer}`}><hr /></div>
         </div>
-        <div className={`${styles.btn} ${styles.btnGoogle}`}>Login with Google</div>
+        <div className={`${styles.btn} ${styles.btnGoogle}`}>
+          <img className={`${styles.googleIcon}`} src={GoogleIconPng} />
+          Login with Google
+        </div>
+        <div className={`${styles.btn} ${styles.btnFacebook}`}>
+          <img className={`${styles.facebookIcon}`} src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg" />
+          Login with Facebook
+        </div>
+        <div className={`${styles.subtext} ${styles.bottomText}`}>
+          Don't have an account? <a href="#">Sign up</a>
+        </div>
       </form>
     </div>
   </div>

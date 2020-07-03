@@ -19,6 +19,7 @@
     .loginTitle {
       font-size: 1.5rem;
       text-align: center;
+      margin-bottom: 20px;
     }
 
     form {
@@ -53,10 +54,9 @@
         }
       }
 
-      .forgotPassword {
+      .subtext {
         font-size: 16px;
         margin-top: 10px;
-        text-align: right;
         color: gray;
 
         a {
@@ -67,6 +67,15 @@
         a:hover {
           color: #0056b3;
         }
+      }
+
+      .forgotPassword {
+        text-align: right;
+      }
+
+      .bottomText {
+        text-align: center;
+        margin-top: 40px;
       }
 
       .btn {
@@ -81,7 +90,6 @@
         -webkit-transition: .3s all ease;
         -o-transition: .3s all ease;
         transition: .3s all ease;
-        
       }
 
       .btnRegular {
@@ -101,11 +109,40 @@
         border-color: #db3236;
         -webkit-box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
         box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
+        display: flex;
+        vertical-align: center;
+        justify-content: center;
       }
 
       .btnGoogle:hover {
-        -webkit-box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.7) !important;
-        box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.7) !important;
+        -webkit-box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.6) !important;
+        box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.6) !important;
+      }
+
+      .googleIcon {
+        width: 18px;
+        margin-right: 10px;
+      }
+
+      .btnFacebook {
+        margin: 20px 0px 20px 0px;
+        background: rgb(0, 132, 255);
+        border-color: rgb(0, 132, 255);
+        -webkit-box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
+        box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
+        display: flex;
+        vertical-align: center;
+        justify-content: center;
+      }
+
+      .btnFacebook:hover {
+        -webkit-box-shadow: 0 5px 30px -5px rgba(0, 132, 255, 0.6) !important;
+        box-shadow: 0 5px 30px -5px rgba(0, 132, 255, 0.6) !important;
+      }
+
+      .facebookIcon {
+        width: 18px;
+        margin-right: 10px;
       }
 
       .textLine {
