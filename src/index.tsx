@@ -8,6 +8,7 @@ import { Switch, BrowserRouter as Router, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import MainPage from './pages/main';
 import LoginPage from './pages/login';
+import SignupPage from './pages/signup';
 
 /*
 Amplify.configure(amplifyConfig);
@@ -17,6 +18,7 @@ const App: React.FC = () => (
   <Switch>
     <Route exact path="/" component={MainPage} />
     <Route exact path="/login" component={LoginPage} />
+    <Route exact path="/signup" component={SignupPage} />
   </Switch>
 );
 

@@ -4,7 +4,7 @@ import FormButton from '../../../components/formbutton';
 
 import GoogleIconPng from '../../../assets/img/google-icon.png';
 
-const LoginForm: React.FC = () => (
+const SignupForm: React.FC = () => (
   <div className={`${styles.loginFormContainer} responsiveContainer`}>
     <div className={`${styles.loginForm}`}>
       <div className={`${styles.loginTitle}`}>
@@ -22,24 +22,31 @@ const LoginForm: React.FC = () => (
             <div>Password</div>
             <input type="text" name="name" />
           </label>
-          <div className={`${styles.subtext} ${styles.forgotPassword}`}>
-            Forgot <a href="#">Username/Password?</a>
-          </div>
         </div>
-        <FormButton text="Login" type="regular" topMargin={false} />
+        <div className={`${styles.formGroup}`}>
+          <label>
+            <div>Confirm Password</div>
+            <input type="text" name="name" />
+          </label>
+        </div>
+        <FormButton text="Create Account" type="regular" topMargin={false} />
         <div className={`${styles.textLine}`}>
             <div className={`${styles.hrContainer}`}><hr /></div>
             <div className={`${styles.or}`}>or</div>
             <div className={`${styles.hrContainer}`}><hr /></div>
         </div>
-        <FormButton text="Login with Google" type="google" src={GoogleIconPng} topMargin={false} />
-        <FormButton text="Login with Facebook" type="facebook" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg" topMargin={true} />
+        <FormButton text="Sign up with Google" type="google" src={GoogleIconPng} topMargin={false} />
+        <FormButton text="Sign up with Facebook" type="facebook" src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg" topMargin={true} />
+        <div className={`${styles.subtext} ${styles.terms}`}>
+          By creating an account you agree to our<br />
+          <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
+        </div>
         <div className={`${styles.subtext} ${styles.bottomText}`}>
-          Don't have an account? <a href="/signup">Sign up</a>
+          Already have an account? <a href="/login">Log In</a>
         </div>
       </form>
     </div>
   </div>
 );
 
-export default LoginForm;
+export default SignupForm;

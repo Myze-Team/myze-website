@@ -1,0 +1,63 @@
+@import "../../styles/gamut";
+
+.icon {
+    width: 18px;
+    margin-right: 10px;
+}
+
+.topMargin {
+    margin-top: 20px;
+}
+
+.btn {
+    display: flex;
+    vertical-align: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    border-width: 2px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+    top: 0;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.regular {
+    background: $morange;
+    border-color: $morange;
+    -webkit-box-shadow: 0 4px 20px -5px rgba(250, 169, 22, 0.4);
+    box-shadow: 0 4px 20px -5px rgba(250, 169, 22, 0.4);
+}
+
+.regular:hover {
+    -webkit-box-shadow: 0 5px 30px -5px rgba(250, 169, 22, 0.6) !important;
+    box-shadow: 0 5px 30px -5px rgba(250, 169, 22, 0.6) !important;
+}
+
+.google {
+    background: #db3236;
+    border-color: #db3236;
+    -webkit-box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
+    box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
+}
+
+.google:hover {
+    -webkit-box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.6) !important;
+    box-shadow: 0 5px 30px -5px rgba(219,50,54, 0.6) !important;
+}
+
+.facebook {
+    background: rgb(0, 132, 255);
+    border-color: rgb(0, 132, 255);
+    -webkit-box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
+    box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
+}
+
+.facebook:hover {
+    -webkit-box-shadow: 0 5px 30px -5px rgba(0, 132, 255, 0.6) !important;
+    box-shadow: 0 5px 30px -5px rgba(0, 132, 255, 0.6) !important;
+}
