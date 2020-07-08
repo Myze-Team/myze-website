@@ -8,7 +8,7 @@ const SignupForm: React.FC = () => (
   <div className={`${styles.loginFormContainer} responsiveContainer`}>
     <div className={`${styles.loginForm}`}>
       <div className={`${styles.loginTitle}`}>
-        Login
+        Sign Up
       </div>
       <form>
         <div className={`${styles.formGroup}`}>

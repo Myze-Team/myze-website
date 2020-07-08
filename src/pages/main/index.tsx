@@ -3,6 +3,7 @@ import Navbar from './navbar';
 import Cover from './cover';
 import HowItWorks from './howitworks';
 import AboutUs from './aboutus';
+import OurTeam from './ourteam';
 
 const MainPage: React.FC = () => {
   const [scrolled, setScrolled] = React.useState('');
@@ -31,6 +32,7 @@ const MainPage: React.FC = () => {
       <Cover />
       <HowItWorks />
       <AboutUs />
+      <OurTeam />
     </>
   );
 };
