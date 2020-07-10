@@ -18,20 +18,23 @@ const scrollTo = (id: string) => {
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const [active, setActive] = React.useState('cover');
   const handleActive = React.useCallback(() => {
-    var section = document.getElementById("root")?.getElementsByClassName("responsiveContainer") as HTMLCollectionOf<HTMLElement>;
-    var sections: { [key: string]: any } = {};
-    if(section != null) {
-      for(var i = 1; i < section.length; i++) {
-          sections[section[i].id] = section[i].offsetHeight;
+    const section = document
+      .getElementById('root')
+      ?.getElementsByClassName('responsiveContainer') as HTMLCollectionOf<HTMLElement>;
+    const sections: { [key: string]: number } = {};
+    if (section) {
+      for (let i = 1; i < section.length; i += 1) {
+        sections[section[i].id] = section[i].offsetHeight;
       }
-      var currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
-      var total = 0;
-      var s: string;
-      for (s in sections) {
-        if (currentScroll > total - 300 && currentScroll < total + sections[s] - 300) {
-          setActive(s);
+      const currentScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      let total = 0;
+
+      // eslint-disable-next-line guard-for-in, no-restricted-syntax
+      for (const name in Object.getOwnPropertyNames(sections)) {
+        if (currentScroll > total - 300 && currentScroll < total + sections[name] - 300) {
+          setActive(name);
         }
-        total = total + sections[s];
+        total += sections[name];
       }
     }
   }, []);
@@ -49,13 +52,31 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
           <div className={styles.logoText}>myze</div>
         </button>
         <div className={styles.navbarList}>
-          <button type="button" className={`${active}` == 'cover' ? `${styles.active}` : `${styles.inactive}`} onClick={() => {scrollTo('cover')}}>
+          <button
+            type="button"
+            className={`${active}` === 'cover' ? `${styles.active}` : `${styles.inactive}`}
+            onClick={() => {
+              scrollTo('cover');
+            }}
+          >
             Home
           </button>
-          <button type="button" className={`${active}` == 'how-it-works' ? `${styles.active}` : `${styles.inactive}`} onClick={() => {scrollTo('how-it-works')}}>
+          <button
+            type="button"
+            className={`${active}` === 'how-it-works' ? `${styles.active}` : `${styles.inactive}`}
+            onClick={() => {
+              scrollTo('how-it-works');
+            }}
+          >
             How It Works
           </button>
-          <button type="button" className={`${active}` == 'about-us' ? `${styles.active}` : `${styles.inactive}`} onClick={() => {scrollTo('about-us')}}>
+          <button
+            type="button"
+            className={`${active}` === 'about-us' ? `${styles.active}` : `${styles.inactive}`}
+            onClick={() => {
+              scrollTo('about-us');
+            }}
+          >
             About Us
           </button>
           <button type="button">Contact Us</button>

@@ -12,11 +12,7 @@ const Cover: React.FC = () => (
         <span className={styles.bigData}>Big Data.</span>
       </div>
       <h1>To Minimize e-Retail Returns.</h1>
-      <StandardButton
-        href="/login"
-        text="Get Started"
-        className={styles.standardButton}
-      />
+      <StandardButton href="/login" text="Get Started" className={styles.standardButton} />
     </div>
     <img src={CoolGraphSvg} alt="Graph Algorithm Illustration" />
   </div>

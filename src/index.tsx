@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Amplify } from 'aws-amplify';
 import 'typeface-nunito-sans';
 import 'normalize.css';
 import 'focus-visible/dist/focus-visible.min';
@@ -9,10 +10,9 @@ import * as serviceWorker from './serviceWorker';
 import MainPage from './pages/main';
 import LoginPage from './pages/login';
 import SignupPage from './pages/signup';
+import amplifyConfig from './configs/amplify';
 
-/*
 Amplify.configure(amplifyConfig);
-*/
 
 const App: React.FC = () => (
   <Switch>

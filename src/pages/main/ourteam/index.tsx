@@ -10,48 +10,32 @@ const OurTeam: React.FC = () => (
         <div className={`${styles.imgContainer}`}>
           <img src={Andy} alt="avatar" />
         </div>
-        <div className={`${styles.name}`}>
-          Amer Tabban
-        </div>
-        <div className={`${styles.role}`}>
-          CEO/Founder
-        </div>
+        <div className={`${styles.name}`}>Amer Tabban</div>
+        <div className={`${styles.role}`}>CEO/Founder</div>
       </div>
 
       <div className={`${styles.member}`}>
         <div className={`${styles.imgContainer}`}>
           <img src={Andy} alt="avatar" />
         </div>
-        <div className={`${styles.name}`}>
-          Xianhai Cao
-        </div>
-        <div className={`${styles.role}`}>
-          Software Engineer
-        </div>
+        <div className={`${styles.name}`}>Xianhai Cao</div>
+        <div className={`${styles.role}`}>Software Engineer</div>
       </div>
 
       <div className={`${styles.member}`}>
         <div className={`${styles.imgContainer}`}>
           <img src={Andy} alt="avatar" />
         </div>
-        <div className={`${styles.name}`}>
-          Paul Pan
-        </div>
-        <div className={`${styles.role}`}>
-          Software Engineer
-        </div>
+        <div className={`${styles.name}`}>Paul Pan</div>
+        <div className={`${styles.role}`}>Software Engineer</div>
       </div>
 
       <div className={`${styles.member}`}>
         <div className={`${styles.imgContainer}`}>
           <img src={Andy} alt="avatar" />
         </div>
-        <div className={`${styles.name}`}>
-          Andy Young
-        </div>
-        <div className={`${styles.role}`}>
-          Frontend Developer
-        </div>
+        <div className={`${styles.name}`}>Andy Young</div>
+        <div className={`${styles.role}`}>Frontend Developer</div>
       </div>
     </div>
   </div>
