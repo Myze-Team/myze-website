@@ -12,7 +12,7 @@ const SignupForm: React.FC = () => (
         <div className={`${styles.formGroup}`}>
           <label htmlFor="name">
             <div>Email</div>
-            <input type="text" name="name" />
+            <input type="email" name="email" />
           </label>
         </div>
         <div className={`${styles.formGroup}`}>
@@ -53,12 +53,12 @@ const SignupForm: React.FC = () => (
           <div>By creating an account you agree to our</div>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">Terms & Conditions</a>
-          <div>and</div>
+          <span> and </span>
           {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
           <a href="#">Privacy Policy</a>
         </div>
         <div className={`${styles.subtext} ${styles.bottomText}`}>
-          <div>Already have an account?</div>
+          <span>Already have an account? </span>
           <a href="/login">Log In</a>
         </div>
       </form>

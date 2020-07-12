@@ -21,7 +21,7 @@ const LoginForm: React.FC = () => (
             <input type="password" name="password" />
           </label>
           <div className={`${styles.subtext} ${styles.forgotPassword}`}>
-            <div>Forgot </div>
+            <span>Forgot </span>
             {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
             <a href="#">Username/Password?</a>
           </div>
@@ -44,7 +44,7 @@ const LoginForm: React.FC = () => (
           topMargin
         />
         <div className={`${styles.subtext} ${styles.bottomText}`}>
-          <div>Don&rsquo;t have an account?</div>
+          <span>Don&rsquo;t have an account? </span>
           <a href="/signup">Sign up</a>
         </div>
       </form>
