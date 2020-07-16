@@ -2,7 +2,7 @@ import React from 'react';
 import { Auth } from 'aws-amplify';
 import { Redirect, Route, RouteProps } from 'react-router-dom';
 
-const ProtectedRoute: React.FC<RouteProps> = (props) => {
+const UnProtectedRoute: React.FC<RouteProps> = (props) => {
   const [auth, setAuth] = React.useState<any>();
   React.useEffect(() => {
     Auth.currentAuthenticatedUser()
@@ -12,7 +12,7 @@ const ProtectedRoute: React.FC<RouteProps> = (props) => {
         setAuth(null);
       })
   }, []);
-  if (auth === null) {
+  if (auth) {
     return <Redirect to='/' />
   } else if (auth === undefined) {
     return <></>
@@ -20,4 +20,4 @@ const ProtectedRoute: React.FC<RouteProps> = (props) => {
   return <Route {...props} />;
 }
 
-export default ProtectedRoute;
+export default UnProtectedRoute;
