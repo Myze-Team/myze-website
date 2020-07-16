@@ -37,31 +37,31 @@ const SignupForm: React.FC = () => (
             <hr />
           </div>
         </div>
-        <FormButton
-          text="Sign up with Google"
-          type="google"
-          src={GoogleIconPng}
-          topMargin={false}
-        />
-        <FormButton
-          text="Sign up with Facebook"
-          type="facebook"
-          src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg"
-          topMargin
-        />
-        <div className={`${styles.subtext} ${styles.terms}`}>
-          <div>By creating an account you agree to our</div>
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a href="#">Terms & Conditions</a>
-          <span> and </span>
-          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-          <a href="#">Privacy Policy</a>
-        </div>
-        <div className={`${styles.subtext} ${styles.bottomText}`}>
-          <span>Already have an account? </span>
-          <a href="/login">Log In</a>
-        </div>
       </form>
+      <FormButton
+        text="Sign up with Google"
+        type="google"
+        src={GoogleIconPng}
+        topMargin={false}
+      />
+      <FormButton
+        text="Sign up with Facebook"
+        type="facebook"
+        src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg"
+        topMargin
+      />
+      <div className={`${styles.subtext} ${styles.terms}`}>
+        <div>By creating an account you agree to our</div>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a href="#">Terms & Conditions</a>
+        <span> and </span>
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+        <a href="#">Privacy Policy</a>
+      </div>
+      <div className={`${styles.subtext} ${styles.bottomText}`}>
+        <span>Already have an account? </span>
+        <a href="/login">Log In</a>
+      </div>
     </div>
   </div>
 );

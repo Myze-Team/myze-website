@@ -22,14 +22,14 @@ const FormButton: React.FC<FormButtonProps> = ({ type, text, src, topMargin, onC
 
   if (!src) {
     return (
-      <button className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
+      <button type="submit" className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
         {text}
       </button>
     );
   }
 
   return (
-    <button className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
+    <button type="submit" className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
       <img className={`${styles.icon}`} src={`${src}`} alt="login" />
       {text}
     </button>
