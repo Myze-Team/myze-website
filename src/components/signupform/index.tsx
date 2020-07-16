@@ -12,7 +12,7 @@ const SignupForm: React.FC = () => (
         <div className={`${styles.formGroup}`}>
           <label htmlFor="name">
             <div>Email</div>
-            <input type="email" name="email" />
+            <input type="email" id="email" />
           </label>
         </div>
         <div className={`${styles.formGroup}`}>
@@ -22,9 +22,9 @@ const SignupForm: React.FC = () => (
           </label>
         </div>
         <div className={`${styles.formGroup}`}>
-          <label htmlFor="password">
+          <label htmlFor="confirmpassword">
             <div>Confirm Password</div>
-            <input type="password" name="password" />
+            <input type="password" id="confirmpassword" />
           </label>
         </div>
         <FormButton text="Create Account" type="regular" topMargin={false} />

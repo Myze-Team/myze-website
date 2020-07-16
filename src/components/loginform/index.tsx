@@ -21,13 +21,13 @@ const LoginForm: React.FC = () => {
           <div className={`${styles.formGroup}`}>
             <label htmlFor="name">
               <div>Email</div>
-              <input type="text" name="name" />
+              <input type="text" id="name" />
             </label>
           </div>
           <div className={`${styles.formGroup}`}>
             <label htmlFor="password">
               <div>Password</div>
-              <input type="password" name="password" />
+              <input type="password" id="password" />
             </label>
             <div className={`${styles.subtext} ${styles.forgotPassword}`}>
               <span>Forgot </span>
