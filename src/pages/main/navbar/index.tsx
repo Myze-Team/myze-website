@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { Auth } from 'aws-amplify';
 import styles from './index.module.scss';
 import MyzeSvg from '../../../assets/img/myze-icon.svg';
 
@@ -16,6 +17,15 @@ const scrollTo = (id: string) => {
 };
 
 const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
+  const [auth, setAuth] = React.useState<any>();
+  React.useEffect(() => {
+    Auth.currentAuthenticatedUser()
+      .then((user) => {
+        setAuth(user);
+      }).catch(() => {
+        setAuth(null);
+      })
+  }, []);
   const [active, setActive] = React.useState('cover');
   const handleActive = React.useCallback(() => {
     const section = document
@@ -80,9 +90,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             About Us
           </button>
           <button type="button">Contact Us</button>
-          <NavLink to="login" className={styles.loginButton}>
+          {!auth && <NavLink to="login" className={styles.loginButton}>
             Sign In
-          </NavLink>
+          </NavLink>}
+          {auth && <button onClick={() => {Auth.signOut()}} className={styles.loginButton}>Sign Out</button>}
         </div>
       </div>
     </div>

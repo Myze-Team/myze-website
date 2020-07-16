@@ -17,11 +17,6 @@ const MainPage: React.FC = () => {
   }, []);
   React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
-    /*
-    Auth.currentAuthenticatedUser().then((data) => {
-      console.log(data);
-    });
-    */
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
