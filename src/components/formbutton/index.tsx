@@ -6,9 +6,10 @@ interface FormButtonProps {
   text: string;
   src?: string;
   topMargin: boolean;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
 
-const FormButton: React.FC<FormButtonProps> = ({ type, text, src, topMargin }) => {
+const FormButton: React.FC<FormButtonProps> = ({ type, text, src, topMargin, onClick }) => {
   const [classMap] = React.useState(
     (() => {
       const cmap = new Map();
@@ -21,17 +22,17 @@ const FormButton: React.FC<FormButtonProps> = ({ type, text, src, topMargin }) =
 
   if (!src) {
     return (
-      <div className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`}>
+      <button className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
         {text}
-      </div>
+      </button>
     );
   }
 
   return (
-    <div className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`}>
+    <button className={`${styles.btn} ${classMap.get(type)} ${topMargin ? styles.topMargin : ''}`} onClick={onClick}>
       <img className={`${styles.icon}`} src={`${src}`} alt="login" />
       {text}
-    </div>
+    </button>
   );
 };
 
