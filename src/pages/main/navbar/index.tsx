@@ -90,10 +90,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             About Us
           </button>
           <button type="button">Contact Us</button>
-          {!auth && <NavLink to="login" className={styles.loginButton}>
+          {!auth && <NavLink to="login" className={styles.authButton}>
             Sign In
           </NavLink>}
-          {auth && <button onClick={() => {Auth.signOut()}} className={styles.loginButton}>Sign Out</button>}
+          {auth && <button onClick={() => {Auth.signOut()}} className={styles.authButton}>Sign Out</button>}
         </div>
       </div>
     </div>
