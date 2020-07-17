@@ -11,13 +11,14 @@
 }
 
 .btn {
+    border: none;
+    width: 100%;
     display: flex;
     vertical-align: center;
     justify-content: center;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
-    border-width: 2px;
     cursor: pointer;
     color: #fff;
     position: relative;
@@ -29,7 +30,6 @@
 
 .regular {
     background: $morange;
-    border-color: $morange;
     -webkit-box-shadow: 0 4px 20px -5px rgba(250, 169, 22, 0.4);
     box-shadow: 0 4px 20px -5px rgba(250, 169, 22, 0.4);
 }
@@ -41,7 +41,6 @@
 
 .google {
     background: #db3236;
-    border-color: #db3236;
     -webkit-box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
     box-shadow: 0 4px 20px -5px rgba(219,50,54, 0.4);
 }
@@ -53,7 +52,6 @@
 
 .facebook {
     background: rgb(0, 132, 255);
-    border-color: rgb(0, 132, 255);
     -webkit-box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
     box-shadow: 0 4px 20px -5px rgba(0, 132, 255, 0.4);
 }
