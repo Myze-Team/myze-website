@@ -40,7 +40,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
       let total = 0;
 
       // eslint-disable-next-line guard-for-in, no-restricted-syntax
-      for (const name in Object.getOwnPropertyNames(sections)) {
+      for (const name in sections) {
         if (currentScroll > total - 300 && currentScroll < total + sections[name] - 300) {
           setActive(name);
         }
