@@ -1,0 +1,47 @@
+@import "../../styles/gamut";
+
+.item {
+  display: flex;
+
+  .brand {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .name {
+    width: 50%;
+    padding: 5px;
+
+    input[type="text"], input[type="password"], input[type="email"] {
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #495057;
+      border: 1px solid #ced4da;
+      overflow: visible;
+      box-sizing:border-box;
+      -moz-box-sizing:border-box;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+      outline: none;
+      border-color: $morange;
+    }
+
+    input[type="text"]:active, input[type="password"]:active, input[type="email"]:active {
+      border-color: $morange;
+    }
+  }
+
+  .size {
+    width: 25%;
+    padding: 5px;
+  }
+
+  div {
+    border-radius: 0;
+    cursor: pointer;
+  }
+}
