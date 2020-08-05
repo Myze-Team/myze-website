@@ -19,7 +19,7 @@ const Closet: React.FC = () => {
   ]
 
   return (
-    <div className={`${styles.wrapper} responsiveContainer`}>
+    <div className={`${styles.wrapper}`}>
       <div className={`${styles.container}`}>
         <div className={`${styles.title}`}>Input your best fitting clothes</div>
         <div className={`${styles.closet}`}>

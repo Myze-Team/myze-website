@@ -45,3 +45,23 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .item {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .brand {
+    width: 100% !important;
+  }
+
+  .name {
+    width: 100% !important;
+  }
+
+  .size {
+    width: 100% !important;
+  }
+}
