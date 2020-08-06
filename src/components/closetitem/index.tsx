@@ -17,6 +17,7 @@ const ClosetItem: React.FC<ClosetItemProps> = ({ brand, name, size, brands, size
         <Select defaultValue={brands.find(e => e.value === `${brand}`)} options={brands} />
       </div>
       <div className={`${styles.name}`}>
+        <span className={`${styles.mglass}`}></span>
         <input type="text" defaultValue={`${name}`} placeholder="Name" />
       </div>
       <div className={`${styles.size}`}>

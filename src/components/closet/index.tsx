@@ -21,7 +21,7 @@ const Closet: React.FC = () => {
   return (
     <div className={`${styles.wrapper}`}>
       <div className={`${styles.container}`}>
-        <div className={`${styles.title}`}>Input your best fitting clothes</div>
+        <div className={`${styles.title}`}>Input your best fitting shirts</div>
         <div className={`${styles.closet}`}>
           <div className={`${styles.header}`}>
             <div className={`${styles.brand}`}>
@@ -34,12 +34,11 @@ const Closet: React.FC = () => {
               Size
             </div>
           </div>
-          <ClosetItem brand="Nike" name="Futura" size="M" brands={brands} sizes={sizes} />
-          <ClosetItem brand="Uniqlo" name="AIRism Crew Neck" size="L" brands={brands} sizes={sizes} />
-          <ClosetItem brand="test" name="test" size="test" brands={brands} sizes={sizes} />
-          <ClosetItem brand="" name="" size="" brands={brands} sizes={sizes} />
-          <div className={`${styles.addItem}`}>
-            Add More...
+          <div id="items">
+            <ClosetItem brand="Nike" name="Futura" size="M" brands={brands} sizes={sizes} />
+            <ClosetItem brand="Uniqlo" name="AIRism Crew Neck" size="L" brands={brands} sizes={sizes} />
+            <ClosetItem brand="test" name="test" size="test" brands={brands} sizes={sizes} />
+            <ClosetItem brand="" name="" size="" brands={brands} sizes={sizes} />
           </div>
         </div>
         <FormButton text="Save" type="regular" topMargin={true} />
