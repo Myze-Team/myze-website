@@ -22,9 +22,10 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     Auth.currentAuthenticatedUser()
       .then((user) => {
         setAuth(user);
-      }).catch(() => {
-        setAuth(null);
       })
+      .catch(() => {
+        setAuth(null);
+      });
   }, []);
   const [active, setActive] = React.useState('cover');
   const handleActive = React.useCallback(() => {
@@ -90,10 +91,22 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             About Us
           </button>
           <button type="button">Contact Us</button>
-          {!auth && <NavLink to="login" className={styles.authButton}>
-            Sign In
-          </NavLink>}
-          {auth && <button onClick={() => {Auth.signOut()}} className={styles.authButton}>Sign Out</button>}
+          {!auth && (
+            <NavLink to="login" className={styles.authButton}>
+              Sign In
+            </NavLink>
+          )}
+          {auth && (
+            <button
+              onClick={() => {
+                Auth.signOut();
+              }}
+              className={styles.authButton}
+              type="submit"
+            >
+              Sign Out
+            </button>
+          )}
         </div>
       </div>
     </div>

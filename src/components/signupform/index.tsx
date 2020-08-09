@@ -38,12 +38,7 @@ const SignupForm: React.FC = () => (
           </div>
         </div>
       </form>
-      <FormButton
-        text="Sign up with Google"
-        type="google"
-        src={GoogleIconPng}
-        topMargin={false}
-      />
+      <FormButton text="Sign up with Google" type="google" src={GoogleIconPng} topMargin={false} />
       <FormButton
         text="Sign up with Facebook"
         type="facebook"

@@ -12,7 +12,7 @@ const LoginForm: React.FC = () => {
   };
   const handleFacebookLogin = () => {
     Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Facebook });
-  }
+  };
   return (
     <div className={`${styles.loginFormContainer} responsiveContainer`}>
       <div className={`${styles.loginForm}`}>
@@ -46,7 +46,13 @@ const LoginForm: React.FC = () => {
             </div>
           </div>
         </form>
-        <FormButton text="Login with Google" type="google" src={GoogleIconPng} topMargin={false} onClick={handleGoogleLogin} />
+        <FormButton
+          text="Login with Google"
+          type="google"
+          src={GoogleIconPng}
+          topMargin={false}
+          onClick={handleGoogleLogin}
+        />
         <FormButton
           text="Login with Facebook"
           type="facebook"
@@ -61,6 +67,6 @@ const LoginForm: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
 export default LoginForm;

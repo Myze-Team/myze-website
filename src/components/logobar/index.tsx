@@ -6,7 +6,9 @@ const LogoBar: React.FC = () => (
   <div className={`${styles.nav}`}>
     <div className={`${styles.navbar} responsiveContainer`}>
       <button type="button" className={styles.logoContainer}>
-        <a href="/"><img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} /></a>
+        <a href="/">
+          <img src={MyzeSvg} alt="Myze Logo" className={styles.myzeLogo} />
+        </a>
       </button>
     </div>
   </div>
