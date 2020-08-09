@@ -11,7 +11,6 @@ import MainPage from './pages/main';
 import LoginPage from './pages/login';
 import SignupPage from './pages/signup';
 import amplifyConfig from './configs/amplify';
-import ProtectedRoute from './components/protectedroute';
 import UnProtectedRoute from './components/unprotectedroute';
 import Dashboard from './pages/dashboard';
 
