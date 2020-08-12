@@ -17,8 +17,8 @@ const sizes = [
   { value: 'L', label: 'L' },
   { value: 'XL', label: 'XL' },
   { value: 'XXL', label: 'XXL' },
-  { value: 'XXXL', label: 'XXXL' }
-]
+  { value: 'XXXL', label: 'XXXL' },
+];
 
 const Closet: React.FC = () => {
   const [closetItems, setClosetItems] = React.useState([
@@ -51,7 +51,7 @@ const Closet: React.FC = () => {
           <div className={`${styles.addItemWrapper}`}>
             <button className={`${styles.addItem}`} type="submit" onClick={addItem}>
               Add Item
-          </button>
+            </button>
           </div>
         </div>
         <FormButton text="Save" type="regular" topMargin />
