@@ -7,6 +7,26 @@ import FormButton from '../formbutton';
 import GoogleIconPng from '../../assets/img/google-icon.png';
 
 const SignupForm: React.FC = () => {
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const [confirmpwd, setConfirmpwd] = React.useState('');
+  const handleSignup = async () => {
+    try {
+      if (password !== confirmpwd) {
+        throw Error("Passwords don't match");
+      }
+      await Auth.signUp({
+        username,
+        password,
+      });
+      setUsername('');
+      setPassword('');
+      setConfirmpwd('');
+      window.location.replace('login');
+    } catch (e) {
+      console.log(e);
+    }
+  };
   const handleGoogleSignup = async () => {
     await Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
   };
@@ -21,22 +41,45 @@ const SignupForm: React.FC = () => {
           <div className={`${styles.formGroup}`}>
             <label htmlFor="name">
               <div>Email</div>
-              <input type="email" id="email" />
+              <input
+                type="email"
+                id="email"
+                onChange={(event) => {
+                  setUsername(event.target.value);
+                }}
+              />
             </label>
           </div>
           <div className={`${styles.formGroup}`}>
             <label htmlFor="password">
               <div>Password</div>
-              <input type="password" name="password" />
+              <input
+                type="password"
+                name="password"
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                }}
+              />
             </label>
           </div>
           <div className={`${styles.formGroup}`}>
             <label htmlFor="confirmpassword">
               <div>Confirm Password</div>
-              <input type="password" id="confirmpassword" />
+              <input
+                type="password"
+                id="confirmpassword"
+                onChange={(event) => {
+                  setConfirmpwd(event.target.value);
+                }}
+              />
             </label>
           </div>
-          <FormButton text="Create Account" type="regular" topMargin={false} />
+          <FormButton
+            text="Create Account"
+            type="regular"
+            topMargin={false}
+            onClick={handleSignup}
+          />
           <div className={`${styles.textLine}`}>
             <div className={`${styles.hrContainer}`}>
               <hr />

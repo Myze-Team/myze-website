@@ -14,6 +14,7 @@ const LoginForm: React.FC = () => {
       await Auth.signIn(username, password);
       setUsername('');
       setPassword('');
+      window.location.replace('dashboard');
     } catch (e) {
       console.log(e);
     }
