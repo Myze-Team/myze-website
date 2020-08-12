@@ -26,7 +26,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
       .catch(() => {
         setAuth(null);
       });
-  });
+  }, []);
   const [active, setActive] = React.useState('cover');
   const handleActive = React.useCallback(() => {
     const section = document
@@ -100,6 +100,7 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
             <button
               onClick={() => {
                 Auth.signOut();
+                setAuth(undefined);
               }}
               className={styles.authButton}
               type="submit"
