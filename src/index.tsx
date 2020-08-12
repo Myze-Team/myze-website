@@ -11,9 +11,9 @@ import MainPage from './pages/main';
 import LoginPage from './pages/login';
 import SignupPage from './pages/signup';
 import amplifyConfig from './configs/amplify';
-import ProtectedRoute from './components/protectedroute';
 import UnProtectedRoute from './components/unprotectedroute';
 import Dashboard from './pages/dashboard';
+import ProtectedRoute from './components/protectedroute';
 
 Amplify.configure(amplifyConfig);
 
@@ -22,7 +22,7 @@ const App: React.FC = () => (
     <Route exact path="/" component={MainPage} />
     <UnProtectedRoute exact path="/login" component={LoginPage} />
     <UnProtectedRoute exact path="/signup" component={SignupPage} />
-    <UnProtectedRoute exact path="/dashboard" component={Dashboard} />
+    <ProtectedRoute exact path="/dashboard" component={Dashboard} />
   </Switch>
 );
 
