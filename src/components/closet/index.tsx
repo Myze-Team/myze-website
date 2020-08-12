@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import styles from './index.module.scss';
 import FormButton from '../formbutton';
 import ClosetItem from '../closetitem';
@@ -25,6 +26,8 @@ const Closet: React.FC = () => {
     <ClosetItem brand="" name="" size="" brands={brands} sizes={sizes} />,
   ]);
 
+  const history = useHistory();
+
   const addItem = () => {
     setClosetItems([
       ...closetItems,
@@ -48,6 +51,14 @@ const Closet: React.FC = () => {
           </button>
         </div>
         <FormButton text="Save" type="regular" topMargin />
+        <button
+          type="submit"
+          onClick={() => {
+            history.push('/');
+          }}
+        >
+          Back to home.
+        </button>
       </div>
     </div>
   );

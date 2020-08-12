@@ -1,6 +1,7 @@
 import React from 'react';
 import { Auth } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
+import { useHistory } from 'react-router-dom';
 import styles from './index.module.scss';
 import FormButton from '../formbutton';
 
@@ -10,6 +11,7 @@ const SignupForm: React.FC = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
   const [confirmpwd, setConfirmpwd] = React.useState('');
+  const history = useHistory();
   const handleSignup = async () => {
     try {
       if (password !== confirmpwd) {
@@ -22,7 +24,7 @@ const SignupForm: React.FC = () => {
       setUsername('');
       setPassword('');
       setConfirmpwd('');
-      window.location.replace('login');
+      history.push('login');
     } catch (e) {
       console.log(e);
     }

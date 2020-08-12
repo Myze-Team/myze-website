@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Auth } from 'aws-amplify';
 import { CognitoHostedUIIdentityProvider } from '@aws-amplify/auth';
 import styles from './index.module.scss';
@@ -9,12 +10,13 @@ import GoogleIconPng from '../../assets/img/google-icon.png';
 const LoginForm: React.FC = () => {
   const [username, setUsername] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const history = useHistory();
   const handleUserLogin = async () => {
     try {
       await Auth.signIn(username, password);
       setUsername('');
       setPassword('');
-      window.location.replace('dashboard');
+      history.push('dashboard');
     } catch (e) {
       console.log(e);
     }
