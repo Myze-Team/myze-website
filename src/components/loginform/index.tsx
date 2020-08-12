@@ -7,27 +7,50 @@ import FormButton from '../formbutton';
 import GoogleIconPng from '../../assets/img/google-icon.png';
 
 const LoginForm: React.FC = () => {
-  const handleGoogleLogin = () => {
-    Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
+  const [username, setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  const handleUserLogin = async () => {
+    try {
+      await Auth.signIn(username, password);
+      setUsername('');
+      setPassword('');
+    } catch (e) {
+      console.log(e);
+    }
   };
-  const handleFacebookLogin = () => {
-    Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Facebook });
+  const handleGoogleLogin = async () => {
+    await Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
+  };
+  const handleFacebookLogin = async () => {
+    await Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Facebook });
   };
   return (
     <div className={`${styles.loginFormContainer} responsiveContainer`}>
       <div className={`${styles.loginForm}`}>
         <div className={`${styles.loginTitle}`}>Login</div>
-        <form>
+        <div>
           <div className={`${styles.formGroup}`}>
             <label htmlFor="name">
               <div>Email</div>
-              <input type="text" id="name" />
+              <input
+                type="text"
+                id="name"
+                onChange={(event) => {
+                  setUsername(event.target.value);
+                }}
+              />
             </label>
           </div>
           <div className={`${styles.formGroup}`}>
             <label htmlFor="password">
               <div>Password</div>
-              <input type="password" id="password" />
+              <input
+                type="password"
+                id="password"
+                onChange={(event) => {
+                  setPassword(event.target.value);
+                }}
+              />
             </label>
             <div className={`${styles.subtext} ${styles.forgotPassword}`}>
               <span>Forgot </span>
@@ -35,7 +58,7 @@ const LoginForm: React.FC = () => {
               <a href="#">Username/Password?</a>
             </div>
           </div>
-          <FormButton text="Login" type="regular" topMargin={false} />
+          <FormButton text="Login" type="regular" topMargin={false} onClick={handleUserLogin} />
           <div className={`${styles.textLine}`}>
             <div className={`${styles.hrContainer}`}>
               <hr />
@@ -45,7 +68,7 @@ const LoginForm: React.FC = () => {
               <hr />
             </div>
           </div>
-        </form>
+        </div>
         <FormButton
           text="Login with Google"
           type="google"
