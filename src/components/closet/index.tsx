@@ -15,7 +15,9 @@ const Closet: React.FC = () => {
     { value: 'S', label: 'S' },
     { value: 'M', label: 'M' },
     { value: 'L', label: 'L' },
-    { value: 'XL', label: 'XL' }
+    { value: 'XL', label: 'XL' },
+    { value: 'XXL', label: 'XXL' },
+    { value: 'XXXL', label: 'XXXL' }
   ]
 
   return (

@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 import Select from 'react-select';
+import CreatableSelect from 'react-select/creatable';
 
 interface ClosetItemProps {
   brand: string;
@@ -14,7 +15,7 @@ const ClosetItem: React.FC<ClosetItemProps> = ({ brand, name, size, brands, size
   return (
     <div className={`${styles.item}`}>
       <div className={`${styles.brand}`}>
-        <Select defaultValue={brands.find(e => e.value === `${brand}`)} options={brands} />
+        <CreatableSelect defaultValue={brands.find(e => e.value === `${brand}`)} options={brands} isClearable />
       </div>
       <div className={`${styles.name}`}>
         <span className={`${styles.mglass}`}></span>
